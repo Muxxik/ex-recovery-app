@@ -11,16 +11,6 @@ import FirebaseAnalytics
 
 struct MainView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Text("День 1. Дыши глубже.")
-                .font(.title)
-
-            Button("Я завершил") {
-                Analytics.logEvent("completed_day", parameters: [
-                    "day_number": 1,
-                    "success": true
-                ])
-            }
-        }
+        DailySummaryView()
     }
 }

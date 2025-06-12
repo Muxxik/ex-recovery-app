@@ -50,6 +50,7 @@ Each day is a fresh start to nurture your independence and self-love. Embrace th
 """)
                     .font(.body)
                     .foregroundColor(.secondary)
+                    .multilineTextAlignment(.center)
             }
             .padding(.horizontal)
 

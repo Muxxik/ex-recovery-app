@@ -7,9 +7,15 @@
 
 import SwiftUI
 import SwiftData
+import Firebase
 
 @main
 struct ex_recovery_appApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    @State private var isOnboardingComplete = false
+    @State private var isSubscribed = false
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,8 +31,14 @@ struct ex_recovery_appApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+                    if !isOnboardingComplete {
+                        OnboardingView(isOnboardingComplete: $isOnboardingComplete)
+                    } else if !isSubscribed {
+                        PaywallView(isSubscribed: $isSubscribed)
+                    } else {
+                        MainView()
+                    }
+                }
         .modelContainer(sharedModelContainer)
     }
 }

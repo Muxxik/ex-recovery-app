@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 import UserNotifications
 
+
+
+
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     func application(_ application: UIApplication,
@@ -23,6 +26,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             print("🔔 Push permission granted: \(granted)")
         }
+        
 
         application.registerForRemoteNotifications()
         return true
@@ -33,5 +37,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
     }
+    
+
 }
 

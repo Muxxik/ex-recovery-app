@@ -14,6 +14,8 @@
 		CA3584A32DFAE9CF00D1B0B7 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CA3584A22DFAE9CF00D1B0B7 /* FirebaseInAppMessaging-Beta */; };
 		CA3584A52DFAE9CF00D1B0B7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = CA3584A42DFAE9CF00D1B0B7 /* FirebaseMessaging */; };
 		CA3584A72DFAE9CF00D1B0B7 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CA3584A62DFAE9CF00D1B0B7 /* FirebaseRemoteConfig */; };
+		CAA29D922DFB32B600A7FD81 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = CAA29D912DFB32B600A7FD81 /* Adapty */; };
+		CAA29D942DFB32B600A7FD81 /* AdaptyUI in Frameworks */ = {isa = PBXBuildFile; productRef = CAA29D932DFB32B600A7FD81 /* AdaptyUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA29D942DFB32B600A7FD81 /* AdaptyUI in Frameworks */,
 				CA3584A52DFAE9CF00D1B0B7 /* FirebaseMessaging in Frameworks */,
+				CAA29D922DFB32B600A7FD81 /* Adapty in Frameworks */,
 				CA35849B2DFAE9CF00D1B0B7 /* FirebaseAnalytics in Frameworks */,
 				CA3584A12DFAE9CF00D1B0B7 /* FirebaseCrashlytics in Frameworks */,
 				CA3584A72DFAE9CF00D1B0B7 /* FirebaseRemoteConfig in Frameworks */,
@@ -149,6 +153,8 @@
 				CA3584A22DFAE9CF00D1B0B7 /* FirebaseInAppMessaging-Beta */,
 				CA3584A42DFAE9CF00D1B0B7 /* FirebaseMessaging */,
 				CA3584A62DFAE9CF00D1B0B7 /* FirebaseRemoteConfig */,
+				CAA29D912DFB32B600A7FD81 /* Adapty */,
+				CAA29D932DFB32B600A7FD81 /* AdaptyUI */,
 			);
 			productName = "ex-recovery-app";
 			productReference = CA35846D2DFAE55800D1B0B7 /* ex-recovery-app.app */;
@@ -234,6 +240,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				CA3584992DFAE9CF00D1B0B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CAA29D902DFB32B600A7FD81 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA35846E2DFAE55800D1B0B7 /* Products */;
@@ -604,6 +611,14 @@
 				minimumVersion = 11.14.0;
 			};
 		};
+		CAA29D902DFB32B600A7FD81 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -641,6 +656,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA3584992DFAE9CF00D1B0B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		CAA29D912DFB32B600A7FD81 /* Adapty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAA29D902DFB32B600A7FD81 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = Adapty;
+		};
+		CAA29D932DFB32B600A7FD81 /* AdaptyUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAA29D902DFB32B600A7FD81 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = AdaptyUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

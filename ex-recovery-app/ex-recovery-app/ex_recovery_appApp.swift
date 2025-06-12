@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 import Firebase
+import Adapty
+
 
 @main
 struct ex_recovery_appApp: App {
@@ -28,6 +30,23 @@ struct ex_recovery_appApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    init() {
+            Task {
+                do {
+                    if let url = Bundle.main.url(forResource: "fallback", withExtension: "json") {
+                        try await Adapty.setFallback(fileURL: url)
+                    }
+                } catch {
+                    print("❌ Ошибка при установке fallback paywall: \(error)")
+                }
+            }
+        
+        
+            Adapty.activate("public_live_eUcrgM9c.2CVH0psVQ6Jp3gDYLqXH")
+        
+        
+        }
 
     var body: some Scene {
         WindowGroup {
@@ -38,7 +57,7 @@ struct ex_recovery_appApp: App {
                     } else {
                         MainView()
                     }
-                }
+        }
         .modelContainer(sharedModelContainer)
     }
 }

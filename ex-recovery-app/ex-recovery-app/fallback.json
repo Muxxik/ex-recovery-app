@@ -1,0 +1,17 @@
+[
+  {
+    "developer_id": "default",
+    "products": [
+      {
+        "vendor_product_id": "weekly_trial_fake",
+        "localized_title": "Weekly Premium",
+        "localized_description": "3-day free trial, then $4.99/week",
+        "price": 4.99,
+        "currency_code": "USD",
+        "region_code": "US",
+        "subscription_period": "P1W",
+        "introductory_offer_eligibility": true
+      }
+    ]
+  }
+]

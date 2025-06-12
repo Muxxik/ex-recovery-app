@@ -1,1 +1,1 @@
-# ex-recover-app
+# ex-recovery-app

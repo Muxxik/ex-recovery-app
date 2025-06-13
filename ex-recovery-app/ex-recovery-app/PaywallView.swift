@@ -16,6 +16,10 @@ struct PaywallView: View {
         VStack(spacing: 20) {
             Text("Получите доступ ко всем возможностям 🔓")
                 .font(.title)
+            
+            Text("3-day free trial, then $4.99/week")
+                .font(.subheadline)
+                .foregroundColor(.gray)
 
             Button("Начать триал") {
                 Analytics.logEvent("tapped_start_trial", parameters: [

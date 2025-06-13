@@ -43,3 +43,7 @@ struct PaywallView: View {
         }
     }
 }
+
+#Preview {
+    PaywallView(isSubscribed: .constant(false))
+}

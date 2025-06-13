@@ -14,8 +14,9 @@ struct OnboardingView: View {
 
     var body: some View {
         VStack(spacing: 24) {
-            Text("Ты на верном пути 💪")
+            Text("Ты на почти верном пути 💪, давай продожим")
                 .font(.title)
+                .multilineTextAlignment(.center)
 
             Button("Продолжить") {
                 Analytics.logEvent("onboarding_completed", parameters: nil)
@@ -28,3 +29,6 @@ struct OnboardingView: View {
     }
 }
 
+#Preview {
+    OnboardingView(isOnboardingComplete: .constant(false))
+}

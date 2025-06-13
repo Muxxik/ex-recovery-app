@@ -125,3 +125,7 @@ struct DailySummaryView: View {
         }
     }
 }
+
+#Preview {
+    DailySummaryView()
+}
